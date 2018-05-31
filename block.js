@@ -20,6 +20,11 @@ class Block {
         Curret Hash : ${this.hash.substring(0, 10)}
         Data        : ${this.data}`;
   }
+
+  // genesis Block is parent block a default block
+  static genesis() {
+    return new this('genesis Time', '--------', 'f158-ha5h', []);
+  }
 }
 
 module.exports = Block;
